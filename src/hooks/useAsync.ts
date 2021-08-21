@@ -24,10 +24,10 @@ const useAsync = <T>(asyncFun: () => Promise<T>) => {
   }, []);
   return {
     data,
+    error,
     isLoading: status === 'pending',
     isSuccess: status === 'success',
     isError: status === 'error',
-    error,
   };
 };
 
