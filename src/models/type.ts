@@ -5,7 +5,7 @@ export interface IProduct {
   description: string;
   store: string;
   product: string;
+  price: number;
   image: string;
-  price?: string;
   __v?: number;
 }
