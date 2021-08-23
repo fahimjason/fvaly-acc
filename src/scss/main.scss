@@ -4,4 +4,6 @@
 @import './global/reset';
 @import './components/common/header';
 @import './components/common/footer';
-@import './components/loginForm/loginForm';
+@import './components/common/captcha';
+@import './forms/loginForm';
+@import './forms/forgotPasswordForm';
