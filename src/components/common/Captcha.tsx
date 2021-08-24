@@ -3,7 +3,11 @@ import { Col, Row } from 'react-bootstrap';
 import captchaBG from 'assets/images/captcha-bg.png';
 import { AiOutlineReload } from 'react-icons/ai';
 
-const Captcha = () => {
+interface ICaptcha {
+  captcha: string;
+}
+
+const Captcha = ({ captcha }: ICaptcha) => {
   return (
     <div className="captcha__component">
       <Row>
@@ -14,7 +18,7 @@ const Captcha = () => {
               className="img-fluid rounded"
               alt="captchaBG"
             />
-            <span className="captcha">z Z A B Y</span>
+            <span className="captcha">{captcha}</span>
           </div>
         </Col>
         <Col md={4}>

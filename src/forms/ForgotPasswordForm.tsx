@@ -1,7 +1,11 @@
 import Captcha from 'components/common/Captcha';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { getCaptcha } from 'services/captchaFunctions';
 
 const ForgotPasswordForm = () => {
+  let captcha = '';
+  captcha = getCaptcha(captcha);
+
   return (
     <div className="forgot__Password__component">
       <Container>
@@ -17,7 +21,7 @@ const ForgotPasswordForm = () => {
                   <Form.Control type="email" placeholder="Enter Your email" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                  <Captcha />
+                  <Captcha captcha={captcha} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupPassword">
                   <Form.Label>
