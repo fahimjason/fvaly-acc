@@ -67,7 +67,7 @@ export const getCaptcha = (captcha: string): string => {
   for (let i = 0; i < 5; i++) {
     const randomCharacters =
       allCharacters[Math.floor(Math.random() * allCharacters.length)];
-    captcha = ` ${randomCharacters}`;
+    captcha += ` ${randomCharacters}`;
   }
   return captcha;
 };
