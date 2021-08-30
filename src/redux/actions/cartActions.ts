@@ -8,15 +8,21 @@ export const addToCart = (payload: IProduct) => {
   };
 };
 
-export const removeCart = (payload: IProduct) => {
+export const removeCart = (payload: string) => {
   return {
     type: ActionType.REMOVE_FROM_CART,
     payload,
   };
 };
 
-export const clearCart = (payload: IProduct) => {
+export const clearCart = () => {
   return {
     type: ActionType.CLEAR_CART,
+    payload: '',
   };
 };
+
+export type CartActions =
+  | ReturnType<typeof addToCart>
+  | ReturnType<typeof removeCart>
+  | ReturnType<typeof clearCart>;
