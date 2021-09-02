@@ -1,4 +1,4 @@
-import { CartActions } from '../actions/cartActions';
+import { CartActions } from '../actions/cartAction';
 import { IProduct } from 'models/type';
 import { ActionType } from 'redux/actionTypes';
 

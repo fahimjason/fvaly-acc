@@ -7,7 +7,7 @@ import ProductService from 'services/ProductService';
 import { imageUrlParser } from 'utilities/imageUrlParser';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
-import { addToCart } from 'redux/actions/cartActions';
+import { addToCart } from 'redux/actionCreators/cartActionsCreator';
 
 interface IParams {
   id: string;
