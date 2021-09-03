@@ -1,7 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
+import { login } from 'redux/actions/authActionCreators';
+import { AppState } from 'redux/store';
+
+interface ILoginFormData {
+  email: string;
+  password: string;
+}
 
 const LoginForm = () => {
+  const history = useHistory();
+
+  const [formData, setFormData] = useState<ILoginFormData>({
+    email: '',
+    password: '',
+  });
+
+  const data = useSelector((state: AppState) => state.auth);
+
+  if (data) {
+    history.push('/');
+  }
+
+  const dispatch = useDispatch();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   return (
     <div className="login__component">
       <Container>
@@ -14,14 +42,29 @@ const LoginForm = () => {
               <Form>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter Your email" />
+                  <Form.Control
+                    name="email"
+                    onChange={handleChange}
+                    type="email"
+                    placeholder="Enter Your email"
+                  />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Enter Password" />
+                  <Form.Control
+                    name="password"
+                    onChange={handleChange}
+                    type="password"
+                    placeholder="Enter Password"
+                  />
                 </Form.Group>
                 <div className="d-grid gap-2">
-                  <Button variant="dark">LOGIN</Button>
+                  <Button
+                    onClick={() => dispatch(login(formData))}
+                    variant="dark"
+                  >
+                    LOGIN
+                  </Button>
                 </div>
               </Form>
               <div className="login-form-info text-center">
