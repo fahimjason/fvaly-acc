@@ -11,12 +11,18 @@ import { BsPhone } from 'react-icons/bs';
 import { FiMail, FiShoppingBag } from 'react-icons/fi';
 import logo from 'assets/images/fvaly.png';
 import { AppState } from 'redux/store';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { IProduct } from 'models/type';
 import { Link } from 'react-router-dom';
+import { logout } from 'redux/actionCreators/authActionCreators';
+import { FaSignOutAlt } from 'react-icons/fa';
 
 const Header = () => {
+  const dispatch = useDispatch();
+
   const cart: IProduct[] = useSelector((state: AppState) => state.cart);
+
+  const { data } = useSelector((state: AppState) => state.auth);
 
   return (
     <div className="header__component">
@@ -61,8 +67,15 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <BiUser />
+                <Link to="/">
+                  <BiUser />
+                </Link>
               </li>
+              {data && (
+                <li className="btn">
+                  <FaSignOutAlt onClick={() => dispatch(logout())} />
+                </li>
+              )}
             </ul>
           </div>
         </Container>
