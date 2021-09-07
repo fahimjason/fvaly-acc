@@ -1,6 +1,6 @@
 import Captcha from 'components/common/Captcha';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { getCaptcha } from 'services/captchaFunctions';
+import { getCaptcha } from 'utilities/captchaFunctions';
 
 const ForgotPasswordForm = () => {
   let captcha = '';
