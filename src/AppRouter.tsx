@@ -10,6 +10,7 @@ const ForgotPassword = React.lazy(
   () => import('./pages/ForgotPassword/ForgotPassword')
 );
 const Checkout = React.lazy(() => import('./pages/CheckOut/Checkout'));
+const Dashboard = React.lazy(() => import('admin/layout/DefaultLayout'));
 
 const AppRouter: React.FC = ({ children }) => {
   return (
@@ -23,6 +24,7 @@ const AppRouter: React.FC = ({ children }) => {
           <Route exact path="/login" component={Login} />
           <Route exact path="/forgot-password" component={ForgotPassword} />
           <Route exact path="/checkout" component={Checkout} />
+          <Route path="/dashboard" component={Dashboard} />
         </Suspense>
       </Switch>
     </Router>

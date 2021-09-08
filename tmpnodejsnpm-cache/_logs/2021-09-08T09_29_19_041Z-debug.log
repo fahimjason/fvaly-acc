@@ -1,0 +1,57 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'node_modules/microevent.ts',
+1 verbose cli   'src/react-app-env.d.ts',
+1 verbose cli   'src/reportWebVitals.ts',
+1 verbose cli   'src/App.tsx',
+1 verbose cli   'src/AppRouter.tsx',
+1 verbose cli   'src/index.tsx',
+1 verbose cli   'node_modules/@istanbuljs',
+1 verbose cli   'node_modules/@popperjs',
+1 verbose cli   'node_modules/@sinonjs',
+1 verbose cli   'node_modules/@webassemblyjs',
+1 verbose cli   'node_modules/asn1.js',
+1 verbose cli   'node_modules/base64-js',
+1 verbose cli   'node_modules/big.js',
+1 verbose cli   'node_modules/bn.js',
+1 verbose cli   'node_modules/chart.js',
+1 verbose cli   'node_modules/core-js',
+1 verbose cli   'node_modules/decimal.js',
+1 verbose cli   'node_modules/des.js',
+1 verbose cli   'node_modules/ejs',
+1 verbose cli   'node_modules/hash.js',
+1 verbose cli   'node_modules/hpack.js',
+1 verbose cli   'node_modules/http-parser-js',
+1 verbose cli   'node_modules/ipaddr.js',
+1 verbose cli   'node_modules/md5.js',
+1 verbose cli   'node_modules/rxjs',
+1 verbose cli   'node_modules/sha.js',
+1 verbose cli   'node_modules/sockjs',
+1 verbose cli   'node_modules/source-map-js',
+1 verbose cli   'node_modules/sprintf-js',
+1 verbose cli   'node_modules/uri-js',
+1 verbose cli   '--fix'
+1 verbose cli ]
+2 info using npm@6.14.13
+3 info using node@v14.17.0
+4 verbose stack Error: missing script: node_modules/microevent.ts
+4 verbose stack     at run (C:\Program Files\nodejs\node_modules\npm\lib\run-script.js:155:19)
+4 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\run-script.js:63:5
+4 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:116:5
+4 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:436:5
+4 verbose stack     at checkBinReferences_ (C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:391:45)
+4 verbose stack     at final (C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:434:3)
+4 verbose stack     at then (C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:161:5)
+4 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:382:12
+4 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:123:16
+4 verbose stack     at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:73:3)
+5 verbose cwd C:\WebDevelopment\ACC\fvaly
+6 verbose Windows_NT 10.0.17763
+7 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "node_modules/microevent.ts" "src/react-app-env.d.ts" "src/reportWebVitals.ts" "src/App.tsx" "src/AppRouter.tsx" "src/index.tsx" "node_modules/@istanbuljs" "node_modules/@popperjs" "node_modules/@sinonjs" "node_modules/@webassemblyjs" "node_modules/asn1.js" "node_modules/base64-js" "node_modules/big.js" "node_modules/bn.js" "node_modules/chart.js" "node_modules/core-js" "node_modules/decimal.js" "node_modules/des.js" "node_modules/ejs" "node_modules/hash.js" "node_modules/hpack.js" "node_modules/http-parser-js" "node_modules/ipaddr.js" "node_modules/md5.js" "node_modules/rxjs" "node_modules/sha.js" "node_modules/sockjs" "node_modules/source-map-js" "node_modules/sprintf-js" "node_modules/uri-js" "--fix"
+8 verbose node v14.17.0
+9 verbose npm  v6.14.13
+10 error missing script: node_modules/microevent.ts
+11 verbose exit [ 1, true ]

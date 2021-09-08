@@ -5,6 +5,19 @@ const instance = axios.create({
   timeout: 15000,
 });
 
+// Add a request interceptor
+instance.interceptors.request.use(function (config) {
+  // Do something before request is sent
+  return {
+    ...config,
+    headers: {
+      Authorization: JSON.parse(
+        JSON.parse(localStorage.getItem('persist:root') || '').auth
+      )?.data?.token,
+    },
+  };
+});
+
 const resBody = (res: AxiosResponse) => res.data.data;
 
 // const get = (url: string) => instance.get(url).then(resBody);
